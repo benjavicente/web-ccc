@@ -2,7 +2,6 @@ import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
-import { dev } from '$app/env';
 
 const basePath = process.env.BASE_PATH || '';
 
@@ -28,7 +27,7 @@ const config = {
 			default: true
 		},
 		paths: {
-			base: dev ? "" : basePath,
+			base: basePath,
 		},
 	}
 };
