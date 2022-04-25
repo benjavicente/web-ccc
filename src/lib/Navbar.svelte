@@ -3,11 +3,12 @@
 	import { Popover, PopoverButton, PopoverPanel, Transition } from '@rgossiaux/svelte-headlessui';
 	import { Icon } from '@steeze-ui/svelte-icon';
 	import { Menu as MenuIcon, X as XIcon, Users, Chat, DocumentText } from '@steeze-ui/heroicons';
+	import { base } from '$app/paths';
 
 	const links = [
-		{ name: 'Grupos', href: '/grupos', icon: Users, color: '#68f3b5' },
-		{ name: 'Canales', href: '/canales', icon: Chat, color: '#7fa0fa' },
-		{ name: 'Guías', href: '/guias', icon: DocumentText, color: '#f25b7a' }
+		{ name: 'Grupos', href: `${base}/grupos`, icon: Users, color: '#68f3b5' },
+		{ name: 'Canales', href: `${base}/canales`, icon: Chat, color: '#7fa0fa' },
+		{ name: 'Guías', href: `${base}/guias`, icon: DocumentText, color: '#f25b7a' }
 	];
 </script>
 
@@ -15,7 +16,7 @@
 	<div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
 		<div class="relative flex items-center justify-between h-16">
 			<!-- izquierda -->
-			<a class="text-white font-bold text-2xl" href="/">
+			<a class="text-white font-bold text-2xl" href="{base}/">
 				<div class="sm:hidden" aria-hidden="true">CCC</div>
 				<div class="hidden sm:inline" aria-hidden="true">Capítulo de Ciencias de la Computación</div>
 			</a>
